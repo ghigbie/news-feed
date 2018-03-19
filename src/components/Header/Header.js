@@ -2,8 +2,16 @@ import React, {Component} from 'react';
 import './Header.css';
 
 class Header extends Component{
-    inputChangeHandler(event){
+    constructor(props){
+        super(props);
 
+        this.state ={
+            keywords: 'Please search here'
+        }
+    }
+
+    inputChangeHandler = (event) => {
+        this.setState({keywords: event.target.value});
     }
 
     render(){
