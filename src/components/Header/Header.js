@@ -2,12 +2,9 @@ import React, {Component} from 'react';
 import './Header.css';
 
 class Header extends Component{
-    constructor(props){
-        super(props);
-
-        this.state ={
-            keywords: 'Please search here'
-        }
+    state ={
+        title: '',
+        keywords: ''
     }
 
     inputChangeHandler = (event) => {
