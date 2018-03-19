@@ -1,12 +1,12 @@
 import React from 'react';
 import './NewsItem.css';
 
-const NewsItem = (props) => {
+const NewsItem = ({newsItem}) => {
     return (
         <div>
-            <h3>{props.newsItem.title}</h3>
+            <h3>{newsItem.title}</h3>
             <div>
-                {props.newsItem.feed}
+                {newsItem.feed}
             </div>
         </div>
         );
