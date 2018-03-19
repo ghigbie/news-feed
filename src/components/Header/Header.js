@@ -3,8 +3,10 @@ import './Header.css';
 
 const Header = () => {
     return(
-        <div>
-        </div>
+        <header className="header">
+            <div className="logo">Logo</div>
+            <input type="text" />
+        </header>
     );
 };
 
