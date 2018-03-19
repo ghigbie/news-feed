@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './Header.css';
 
 class Header extends Component{
-    inputChangeHandler(){
+    inputChangeHandler(event){
 
     }
 
@@ -11,7 +11,7 @@ class Header extends Component{
             <header className="header">
                 <div className="logo">Logo</div>
                 <input type="text" 
-                    onChange={this.inputChangeHandle}/>
+                       onChange={(e) => this.inputChangeHandle(e)}/>
             </header>
         );
     }
