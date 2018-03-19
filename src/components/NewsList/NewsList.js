@@ -1,10 +1,19 @@
 import React from 'react';
 import './NewsList.css';
 
-const NewsList = () => {
+const NewsList = (props) => {
     return(
         <div>
-            News List Item
+           { props.news.map((newsItem) => {
+               return(
+                <div key={newsItem.id}>
+                    <h3>{newsItem.title}</h3>
+                    <div>
+                        {newsItem.feed}
+                    </div>
+                </div>
+               );
+           })}
         </div>
     );
 };

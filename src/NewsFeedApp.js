@@ -5,12 +5,12 @@ import Header from './components/Header/Header';
 import NewsList from './components/NewsList/NewsList';
 
 
-class App extends Component {
+class NewsListApp extends Component {
   render() {
     return (
       <div>
         <Header />
-        <NewsList />
+        <NewsList news={JSON}/>
       </div>
     );
   }
