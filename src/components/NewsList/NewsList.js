@@ -2,10 +2,8 @@ import React from 'react';
 import './NewsList.css';
 
 const NewsList = (props) => {
-    return(
-        <div>
-           { props.news.map((newsItem) => {
-               return(
+    const items = props.news.map((newsItem) => {
+        return(
                 <div key={newsItem.id}>
                     <h3>{newsItem.title}</h3>
                     <div>
@@ -13,7 +11,11 @@ const NewsList = (props) => {
                     </div>
                 </div>
                );
-           })}
+    });
+    
+    return(
+        <div>
+           {items}
         </div>
     );
 };
