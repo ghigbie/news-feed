@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Data from './services/data-service/db.json'
 
 import Header from './components/Header/Header';
 import NewsList from './components/NewsList/NewsList';
