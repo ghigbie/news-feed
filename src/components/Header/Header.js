@@ -16,6 +16,7 @@ class Header extends Component{
             <header className="header">
                 <div className="logo">Logo</div>
                 <input type="text" 
+                       className="input"
                        onChange={(e) => this.inputChangeHandle(e)}/>
             </header>
         );
