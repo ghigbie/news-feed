@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'glamor';
 import './NewsItem.css';
 
 const NewsItem = ({newsItem}) => {
