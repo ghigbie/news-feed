@@ -10,12 +10,15 @@ class NewsListApp extends Component {
     news: JSON
   }
   
+  getKeyword = (event) =>{
+    console.log('This is the get keyword function' , event.target.value);
+  }
   
   
   render() {
     return (
       <div>
-        <Header />
+        <Header keyword={this.getKeyword}/>
         <NewsList news={this.state.news}/>
       </div>
     );
