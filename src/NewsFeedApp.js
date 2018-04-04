@@ -11,7 +11,11 @@ class NewsListApp extends Component {
   }
   
   getKeyword = (event) =>{
-    console.log('This is the get keyword function' , event.target.value);
+    let keyword = event.target.value
+    let filtered = this.state.news.filter((item) => {
+      return item.title.indexOf(keyword) > -1;
+    });
+    console.log(filtered);
   }
   
   
