@@ -6,11 +6,17 @@ import NewsList from './components/NewsList/NewsList';
 
 
 class NewsListApp extends Component {
+  state = {
+    news: JSON
+  }
+  
+  
+  
   render() {
     return (
       <div>
         <Header />
-        <NewsList news={JSON}/>
+        <NewsList news={this.state.news}/>
       </div>
     );
   }
