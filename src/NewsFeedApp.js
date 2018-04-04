@@ -7,7 +7,8 @@ import NewsList from './components/NewsList/NewsList';
 
 class NewsListApp extends Component {
   state = {
-    news: JSON
+    news: JSON,
+    filtered: []
   }
   
   getKeyword = (event) =>{
@@ -16,14 +17,18 @@ class NewsListApp extends Component {
       return item.title.indexOf(keyword) > -1;
     });
     console.log(filtered);
+    this.setState({filtered});
   }
   
   
   render() {
+    let newsFiltered = this.state.filtered;
+    let newsEntire = this.state.news;
+    
     return (
       <div>
         <Header keyword={this.getKeyword}/>
-        <NewsList news={this.state.news}/>
+        <NewsList news={newsFiltered.length === 0 ? newsEntire : newsFiltered}/>
       </div>
     );
   }
